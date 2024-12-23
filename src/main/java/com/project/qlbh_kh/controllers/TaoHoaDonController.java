@@ -70,7 +70,7 @@ public class TaoHoaDonController extends BasicController {
                 tongTienTextField.clear();
                 phoneNumberField.clear();
                 addressField.clear();
-//                fromDate = null;
+                fromDate.setValue(null);
             }
 
         }));
