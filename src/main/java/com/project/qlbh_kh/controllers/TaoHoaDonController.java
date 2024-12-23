@@ -346,6 +346,14 @@ public class TaoHoaDonController extends BasicController {
     }
 
     public void luuHoaDon(){
+        if (fromDate == null || selectedCustomerId == 0 || selectedReceiverId == 0 || productList.isEmpty()) {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Thiếu Thông Tin");
+            alert.setHeaderText(null);
+            alert.setContentText("Vui lòng nhập đầy đủ thông tin!");
+            alert.showAndWait();
+            return;
+        }
         if (fromDate != null) System.out.println("Bill Date: " + fromDateValue);
         if (selectedCustomerId != 0) System.out.println("Customer in ID " + selectedCustomerId);
         if (selectedReceiverId != 0) System.out.println("receiver Name: "+ selectedReceiverId);
